@@ -1,0 +1,252 @@
+//Input and expected output vs actual output
+
+Admin Menu Tests:
+Admin Test 1 (Adding a new book)
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   1
+(Output)   Adding a Book...
+  Enter the title of the book:
+(Input)   My Bibliography
+(Output)   Enter the author of the book:
+(Input)   Me
+(Output)   Enter the cost of the book:
+(Input)   21
+(Output)   Book added successfully.
+
+
+Admin test 2 (If we remove book)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   2
+(Output)   Removing a Book...
+   Enter the title of the book you want to remove:
+(Input)   My Bibliography
+(Output)   Enter the author of the book you want to remove:
+(Input)   Me
+(Output)   Book removed successfully.
+
+
+Admin test 3 (If Book Wasn't Removed)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   3
+(Output)   Updating Book Information...
+   Enter the title of the book you want to update:
+(Input)   My Bibliography
+(Output)   Enter the author of the book you want to update: 
+(Input)   Me
+(Output)   Enter the cost of the book you want to update:
+(Input)   21
+(Output)   Enter the new title of the book (or press Enter to keep current title): 
+(Input)   Enter
+(Output)   Enter the new author of the book (or press Enter to keep current author):
+(Input)   Myself
+(Output)   Enter the new cost of the book (or press Enter to keep current cost):
+(Input)   12
+(Output)   Book information updated successfully.
+
+
+Admin test 4 (If data file has Vern Victory LoanNo)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   4
+(Output)   Enter your choice: 4
+   Viewing Checkouts...
+   Checkouts:
+   -----------------
+   Borrower: Vern
+   Book: Victory
+   Status: LoanNo
+   -----------------
+
+
+Admin test 5 (Adding a new user)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   5
+(Output)   User Management
+   ---------------
+   1. Add User
+   2. Remove User
+   3. Make User Admin
+   4. Remove Admin Privileges
+   Enter your choice:
+(Input)   1
+(Output)   Enter the username of the new user:
+(Input)   Dom
+(Output)   Enter the password for the new user:
+(Input)   pass
+(Output)   User added successfully.
+
+
+Admin Test 6 (Removing a User)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   5
+(Output)   User Management
+   ---------------
+   1. Add User
+   2. Remove User
+   3. Make User Admin
+   4. Remove Admin Privileges
+   Enter your choice:
+(Input)   2
+(Output)   Enter the username of the user you want to remove:
+(Input)   Dom
+(Output)   User removed successfully.
+
+
+Admin test 7 (Giving Admin to a user)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   5
+(Output)   User Management
+   ---------------
+   1. Add User
+   2. Remove User
+   3. Make User Admin
+   4. Remove Admin Privileges
+   Enter your choice:
+(Input)   3
+(Output)   Enter the username of the user you want to make admin:
+(Input)   Dom
+(Output)   User is now an admin.
+
+
+Admin Test 8 (Removing Admin from a user)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   5
+(Output)   User Management
+   ---------------
+   1. Add User
+   2. Remove User
+   3. Make User Admin
+   4. Remove Admin Privileges
+   Enter your choice:
+(Input)   4
+(Output)   Enter the username of the admin you want to demote: 
+(Input)   Dom
+(Output)   Admin privileges removed successfully.
+
+
+Admin Test 9 (Logging out)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   6
+(Output)   Are you sure you want to log out? (Y/N): 
+(Input)   Y
+(Output)   Logging out...
+   Welcome to the Virtual Library Management System
+   ------------------------------------------------
+   1. Login
+   2. Register
+   3. Exit
+   Please select an option
+
+
+Admin Test 10 (Invalid Input)
+
+
+(Input)   Start
+(Output)   Admin Dashboard
+  ---------------
+  1. Add a Book
+  2. Remove a Book
+  3. Update Book Information
+  4. View Checkouts
+  5. Manage Users
+  6. Logout
+  Enter your choice:
+(Input)   a
+(Output)   Invalid input. Please enter a number.

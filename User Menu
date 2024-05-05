@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <LogIn>
 
 using namespace std;
 
@@ -156,7 +157,7 @@ void displayMenu() {
     cout << "3. Return a Book\n";
     cout << "4. View Borrowed Books\n";
     cout << "5. Update Profile\n";
-    cout << "6. Exit\n";
+    cout << "6. Logout\n";
     cout << "Enter your choice: ";
 }
 
@@ -186,7 +187,8 @@ int main() {
                 updateProfile();
                 break;
             case 6:
-                cout << "Exiting...\n";
+                cout << "Logging Out...\n";
+                displayPreLoginMenu()
                 break;
             default:
                 cout << "Invalid choice. Please try again.\n";

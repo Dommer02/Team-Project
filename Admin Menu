@@ -13,6 +13,7 @@ struct Book {
     string title;
     string author;
     string cost;
+    string borrowed;
 };
 
 // Global vector to store the books in the library
@@ -47,6 +48,7 @@ void saveBooks() {
         outFile << book.title << endl;
         outFile << book.author << endl;
         outFile << book.cost << endl;
+        outFile << newBook.borrowed << endl;
     }
 
     outFile.close();
@@ -65,6 +67,8 @@ void addBook() {
 
     cout << "Enter the cost of the book: ";
     getline(cin, cost);
+
+    Book newBook = {title, author, cost, "No"}; // Initialize borrowed as "No"
 
     // Create a new Book object with the provided title, author, and cost
     Book newBook = {title, author, cost};

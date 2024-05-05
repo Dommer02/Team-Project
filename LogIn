@@ -1,5 +1,3 @@
-//Luke Winningham
-
 #include <cstdlib>
 #include <fstream>
 #include <iostream>

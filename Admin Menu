@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <limits>
 #include <unordered_map>
+#include <LogIn>
 
 using namespace std;
 
@@ -366,7 +367,7 @@ void adminDashboard() {
                 cin >> logoutChoice;
                 if (logoutChoice == 'Y' || logoutChoice == 'y') {
                     cout << "Logging out...\n";
-                    // You can add code here to properly logout the user
+                    displayPreLoginMenu()
                     return; // Stop the program
                 } else if (logoutChoice == 'N' || logoutChoice == 'n') {
                     cout << "Returning to Admin Dashboard...\n";

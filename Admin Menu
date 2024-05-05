@@ -49,7 +49,7 @@ void saveBooks() {
         outFile << book.title << endl;
         outFile << book.author << endl;
         outFile << book.cost << endl;
-        outFile << newBook.borrowed << endl;
+        outFile << book.borrowed << endl;
     }
 
     outFile.close();
@@ -69,10 +69,8 @@ void addBook() {
     cout << "Enter the cost of the book: ";
     getline(cin, cost);
 
-    Book newBook = {title, author, cost, "No"}; // Initialize borrowed as "No"
-
     // Create a new Book object with the provided title, author, and cost
-    Book newBook = {title, author, cost};
+    Book newBook = {title, author, cost, "No"};
 
     // Add the new book to the library
     library.push_back(newBook);
@@ -185,7 +183,7 @@ void viewCheckouts() {
 unordered_map<string, string> userCredentials;
 
 void loadUserCredentials() {
-    ifstream file("users_data.txt");
+    ifstream file("users.txt");
     if (!file.is_open()) {
         cerr << "Failed to open users file for reading." << endl;
         return;
@@ -299,7 +297,6 @@ void removeAdmin() {
     }
 }
 
-// Update adminDashboard function
 void adminDashboard() {
     loadBooks(); // Load books from file
     loadUserCredentials(); // Load users from file
@@ -316,7 +313,13 @@ void adminDashboard() {
         cout << "6. Logout\n";
         cout << "Enter your choice: ";
 
-        cin >> choice;
+        // Check if input is a valid integer
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear input buffer
+            cout << "Invalid input. Please enter a number.\n";
+            continue;
+        }
 
         switch (choice) {
             case 1:
@@ -343,7 +346,14 @@ void adminDashboard() {
                 cout << "2. Remove User\n";
                 cout << "3. Make User Admin\n";
                 cout << "4. Remove Admin Privileges\n";
-                cin >> userChoice;
+                cout << "Enter your choice: ";
+                // Check if input is a valid integer
+                if (!(cin >> userChoice)) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear input buffer
+                    cout << "Invalid input. Please enter a number.\n";
+                    continue;
+                }
                 switch (userChoice) {
                     case 1:
                         addUser();
